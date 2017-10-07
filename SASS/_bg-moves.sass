@@ -1,0 +1,20 @@
+.background-moves
+
+  transform: translate3d(0,0,0)
+  background: linear-gradient(135deg, $bgColor 0%, lighten($bgColor, 15%) 25%, lighten($bgColor, 5%) 50%, lighten($bgColor, 15%) 75%, $bgColor 100%)  top left repeat-x
+
+  animation: bg 10s linear infinite
+  background-size: 2250px 100%
+  width: 6750px
+
+
+  height: 100%
+  left: 0
+  opacity: 1
+  position: fixed
+  top: 0
+@keyframes bg
+  0%
+    transform: translate3d(0,0,0)
+  100%
+    transform: translate3d(-2250px,0,0)

@@ -1,0 +1,103 @@
+.content
+
+  position: relative
+  //transition-duration: 500ms
+  //-webkit-transition-duration: 500ms
+  //-moz-transition-duration: 500ms
+  @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+    position: fixed
+    left: $leftFieldWidth !important
+    top: $topFieldWidth
+    width: 100% - $leftFieldWidth - $rightFieldWidth
+    height: 100% - $topFieldWidth - $bottomFieldWidth
+    overflow: hidden
+    box-shadow: 5px 5px 13px rgba(0,0,0, 0.2)
+
+
+
+  &__border
+    position: fixed
+    box-shadow: 5px 5px 13px rgba(100, 100, 100, 0.5), 0px 0px 2px 7px rgba(255, 255, 255, 0.4) inset, 6px 6px 0px 0px rgba(255, 255, 255, 0.3) inset
+    background: transparent
+    left: 0
+    top: 0
+    z-index: 1
+  //&.smallHeader--opened
+    @media (max-width: $breakpoint-xl - 1)
+      left: $smallHeaderWidth
+      //position: relative
+
+    //@media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+
+
+
+
+.section
+  min-height: $breakpoint-vertical
+  @media (max-height: $breakpoint-vertical)
+    min-height: 100vh
+  @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+    min-height: 100%
+  //padding: $topFieldWidth+20px 0 $bottomFieldWidth+20px
+  //display: table-cell
+  vertical-align: middle
+  transition-duration: 700ms
+  transition-timing-function: cubic-bezier(0.330, 1.045, 0.445, 0.950)
+  //position: relative
+  padding: 5% 5%
+  z-index: 2
+  &__header
+    font-size: 2.2em
+    font-family: "Roboto", sans-serif
+    font-weight: bold
+    text-transform: uppercase
+  &__subheader
+    font-size: 1.4em
+    font-family: 'Roboto Condensed', sans-serif
+    opacity: 0.5
+.withUpworkIcon
+  svg, img
+    vertical-align: middle
+    margin-right: 0.2em
+    background: $mainColor
+    width: 1em
+    height: 1em
+  a:hover
+    svg, img
+      background: $additionalColor
+
+@import 'content__home'
+@import 'content__about'
+@import 'content__services'
+@import 'content__resume'
+@import 'content__skills'
+@import 'content__projects'
+@import '_content_testimonials'
+@import 'content__contact'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

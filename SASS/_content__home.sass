@@ -1,0 +1,96 @@
+.home
+  position: relative
+  text-align: center
+  &__background
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: url("img/bg_priroda.jpg") no-repeat fixed center
+      size: cover
+    @include filter(brightness(90%) grayscale(5%) contrast(10%))
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      background: url("img/bg_priroda_gr.jpg") no-repeat fixed center
+
+
+
+  &__header
+    position: relative
+    color: $lightColor
+    font-size: 3em
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+  //margin-bottom: px
+
+  &__specialization
+    position: relative
+    font-size: 1.5em
+    height: 1.1em
+    color: $lightColor
+
+  &__contacts
+    position: relative
+    //background: rgba($bgColor, 0.2)
+    background: $lightColor
+    padding: 15px 0
+    margin: 2em 5%
+    i
+      font-size: 1.2em
+      vertical-align: middle
+      padding-right: 10px
+    &Item
+      @media (max-width: $breakpoint-md - 1)
+        display: block
+        width: auto
+        text-align: left
+        margin: 1.4em 0 1.4em 20%
+
+  &__email
+
+
+
+  &__address
+
+
+  &__upwork
+    line-height: 20px
+
+
+.tooltip
+  &__container
+    position: relative
+  &__link
+  &__item
+    $w: 330px
+    $h: 200px
+    position: absolute
+    //display: none
+    //z-index: -1
+    visibility: hidden
+    top: -$h - 15
+    left: 50%
+    margin-left: -$w/2
+    @media (max-width: $breakpoint-md - 1)
+      left: 0
+      margin-left: -$w/3
+
+    width: $w
+    height: $h
+    background: darken($mainColor, 30%)
+    box-shadow: 2px 2px 2px #666
+    padding: 2px
+    &:after
+      $tr-w: 15px
+      $tr-h: 15px
+      position: absolute
+      content: ''
+      background: darken($mainColor, 30%)
+      width: $tr-w
+      height: $tr-h
+      transform: rotate(45deg)
+      bottom: -$tr-h/2
+      left: 50%
+      margin-left: -$tr-w/2
+    iframe
+      position: relative
+      z-index: 1

@@ -1,0 +1,52 @@
+
+
+extends _head
+block body
+    //.topLine
+
+    #leaves
+    #wrapper.wrapper
+        a(href='#')#headerButton.headerButton.hamburger.hamburger--arrowalt
+            .hamburger-box
+                .hamburger-inner
+            //-span.headerButton__icon
+                span.headerButton__bar
+                span.headerButton__bar
+                span.headerButton__bar
+
+
+        header.header#header
+            a.smallphoto(href="#home" style='background-image: url("img/photo_for_header.jpg")').bg-photo
+                //-img.smallphoto__img(src='img/photo_for_header.jpg')
+            //-.lang
+            //-
+            //-    a(href='#').active
+            //-        span.flag.flag-gb
+            //-        | En
+            //-    | &nbsp;|&nbsp;
+            //-    a(href='#')
+            //-        span.flag.flag-ru
+            //-        | Rus
+            ul.navmenu#navmenu
+                li.navmenu__item(data-menuanchor="s1")
+                    a(href='#about').navmenu__link(section-number="1") About
+                li.navmenu__item(data-menuanchor="s2")
+                    a(href='#services').navmenu__link(section-number="2") Services
+                li.navmenu__item(data-menuanchor="s3")
+                    a(href='#resume').navmenu__link(section-number="3") Resume
+                li.navmenu__item
+                    a(href='#skills').navmenu__link(section-number="4") Skills
+                //-li.navmenu__item
+                    a(href='#projects').navmenu__link(section-number="5") Projects
+                //-li.navmenu__item
+                    a(href='#price').navmenu__link(section-number="6") Status & Price
+                li.navmenu__item
+                    a(href='#testimonials').navmenu__link(section-number="5") Testimonials
+                li.navmenu__item
+                    a(href='#contact').navmenu__link(section-number="6") Contact
+        //-.frame
+        block content
+    //-.content__border
+    //-footer.footer
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bfe1a048-ab9b-49c8-b8ed-cf4b286eeb64" name="garmashov" url="http://garmashov.com">
+        <fileTransfer host="88.85.67.147" port="22" rootFolder="/var/www/admin/data/www/garmashov.com" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

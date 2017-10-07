@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Mikhail Garmashov - Frontend developer, System Analyst, IT consult</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-2.2.1.js"></script>
+  </head>
+  <body>
+    <div class="bg-paper"></div>
+    <div class="leaves-layout"></div>
+    <!--.topLine-->
+    <div id="leaves"></div>
+    <div id="wrapper" class="wrapper"><a href="#" id="headerButton" class="headerButton hamburger hamburger--arrowalt">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div></a>
+      <header id="header" class="header"><a href="#home" style="background-image: url(&quot;img/photo_for_header.jpg&quot;)" class="smallphoto bg-photo"></a>
+        <ul id="navmenu" class="navmenu">
+          <li data-menuanchor="s1" class="navmenu__item"><a href="#about" section-number="1" class="navmenu__link">About</a></li>
+          <li data-menuanchor="s2" class="navmenu__item"><a href="#services" section-number="2" class="navmenu__link">Services</a></li>
+          <li data-menuanchor="s3" class="navmenu__item"><a href="#resume" section-number="3" class="navmenu__link">Resume</a></li>
+          <li class="navmenu__item"><a href="#skills" section-number="4" class="navmenu__link">Skills</a></li>
+          <li class="navmenu__item"><a href="#testimonials" section-number="5" class="navmenu__link">Testimonials</a></li>
+          <li class="navmenu__item"><a href="#contact" section-number="6" class="navmenu__link">Contact</a></li>
+        </ul>
+      </header>
+      <div id="content" class="content">
+        <section id="home" class="home section valign-middle">
+          <div class="valign-middle__cell">
+            <div class="home__background"></div>
+            <h1 data-wow-duration="5s" class="home__header wow fadeIn">Hello, I'm Mikhail</h1><span class="home__specialization"></span>
+            <div class="home__contacts wow bounceInUp">
+              <div class="home__address col-4 home__contactsItem tooltip__container"><a href="#" data-tooltipId="yekb1" class="tooltip__link"><i class="fa fa-map-pin"></i>Yekaterinburg, Russia</a>
+                <div id="yekb1" class="tooltip__item">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.4800667290588!2d60.59558831612709!3d56.83770891526234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDUwJzE1LjciTiA2MMKwMzUnNTIuMCJF!5e0!3m2!1sru!2s!4v1460818516136" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="home__email col-4 home__contactsItem"><a href="mailto:mikhail@garmashov.com"><i class="fa fa-envelope"></i>mikhail@garmashov.com</a></div>
+              <div class="home__upwork col-4 home__contactsItem withUpworkIcon"><a href="https://www.upwork.com/freelancers/~01e66dac02573e65a4"><img src="img/upwork.svg">Upwork Profile</a></div>
+            </div>
+          </div>
+        </section>
+        <section id="about" class="about section valign-middle">
+          <div class="valign-middle__cell">
+            <h1>Mikhail Garmashov</h1>
+            <div style="background-image: url(&quot;img/portrait2_bw.png&quot;)" class="about__photo bg-photo wow bounceInLeft"></div>
+            <div class="about__content">
+              <h2 class="section__header section__header--about wow bounceInDown">Professional Profile</h2>
+              <div class="about__text wow bounceInRight">
+                <p>I develop an information system in terms of interaction with the user.</p>
+                <p>I act as system analyst with web development skills. In this capacity, I've been more than 5 years.</p>
+                <p>>4 years I worked in a large IT-company, which develops systems for the state - a complex architecture, complex solutions. Working with large data structures algorhythms, modelling, analizing, presentations.</p>
+                <p>Last year, as a freelancer, I develop small projects for mass users.</p>
+                <p><b>My area of expertise covers all related areas:</b></p>
+                <ul>
+                  <li>define goals and objectives of the system. The formalization of requirements (SRS, FRS)</li>
+                  <li>planning the implementation, stages of development</li>
+                  <li>prototyping of the interface for planning of all custom functions</li>
+                  <li>development of the visual part of the system (coding)</li>
+                  <li>the relation with the backend</li>
+                </ul>
+                <p class="text-center italic"> I'm not just analyst or coder or web-designer.<br>I'm a set of them, that helps to consult and resolve any problem&nbsp;of&nbsp;IT.</p>
+              </div>
+              <div class="stats">
+                <div class="stats__featuresList">
+                  <div data-wow-delay="200ms" class="stats__feature stats_feature--feature1 wow bounceInUp">
+                    <p class="stats__count"><i class="fa fa-laptop"></i>5+
+                    </p>
+                    <p class="stats__text">years in IT</p>
+                  </div>
+                  <div data-wow-delay="400ms" class="stats__feature stats_feature--feature2 wow bounceInUp">
+                    <p class="stats__count"><i class="fa fa-cogs"></i>$10M
+                    </p>
+                    <p class="stats__text">project budgets</p>
+                  </div>
+                  <div data-wow-delay="600ms" class="stats__feature stats_feature--feature3 wow bounceInUp">
+                    <p class="stats__count"><i class="fa fa-flag"></i>40+
+                    </p>
+                    <p class="stats__text">projects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="services" class="services section valign-middle">
+          <div class="valign-middle__cell">
+            <h2 data-wow-delay="200ms" class="section__header services__header wow bounceInDown">What I can do</h2>
+            <p class="section__subheader services__subheader wow bounceInDown">Need something? I got it</p>
+            <div class="serviceList">
+              <div class="col-4 serviceList__item service wow bounceInLeft"><i class="serviceList__icon fa fa-binoculars"></i>
+                <h3 class="serviceList__header">System Analyst</h3>
+                <p class="serviceList__text">My main specialization - System Analytics. What does it mean? I anailaize your subject for planning all IT work. I architect database - define data, which is necessary for your system, I define functionality, I explore similar projects for getting ideas and best practices. So System analyst - it&#39;s all points of IT-view.</p>
+              </div>
+              <div class="col-4 serviceList__item service wow bounceInDown"><i class="serviceList__icon fa fa-question-circle"></i>
+                <h3 class="serviceList__header">IT-consultations</h3>
+                <p class="serviceList__text">Consultations about IT-architecture, about requirements and purposes. I can help to define business task of your system, determine full list of needed functionality, divide for stages of developing, choose platform or CMS, target group, plan of testing and much more else.</p>
+              </div>
+              <div class="col-4 serviceList__item service wow bounceInRight"><i class="serviceList__icon fa fa-pencil-square-o"></i>
+                <h3 class="serviceList__header">Prototyping</h3>
+                <p class="serviceList__text">It helps to define approximate form of your site, service. It could be made fast. AFter getting prototypr, you will see that all functionality thast you need will be realised, or you forget something. Prototype doesn&#39;t work as system, but it has lot of interface solutions.</p>
+              </div>
+              <div data-wow-delay="200ms" class="col-4 serviceList__item service wow bounceInUp"><i class="serviceList__icon fa fa-desktop"></i>
+                <h3 class="serviceList__header">Frontend-developing</h3>
+                <p class="serviceList__text">Everything related with Frontenf part of your system - interface, animation, forms, styles. I realize live html pages for mobiles, tablets, large screens. Also offer web-design. I don&#39;t draw graphics. Just combine colors, fonts, sizes, etc.</p>
+              </div>
+              <div data-wow-delay="400ms" class="col-4 serviceList__item service wow bounceInUp"><i class="serviceList__icon fa fa-code"></i>
+                <h3 class="serviceList__header">Web-developing</h3>
+                <p class="serviceList__text">If you need some popular functionality without unique backend issues, I also do it! Mostly CMS Wordpress is used. I write some easy plugins ad make your site really working.</p>
+              </div>
+              <div data-wow-delay="600ms" class="col-4 serviceList__item service wow bounceInUp"><i class="serviceList__icon fa fa-suitcase"></i>
+                <h3 class="serviceList__header">Project Management</h3>
+                <p class="serviceList__text">If I can&#39;t to resolve some stuff, if I understand that your project needs some really hard coding or drawing design, so I can hire highly specialized freelancers. Also If you have large project, I can build process of communication and working between freelancers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="resume" class="resume section valign-middle">
+          <div class="valign-middle__cell">
+            <h2 class="section__header resume__header">Resume</h2>
+            <p class="section__subheader resume__subheader">My education and experience</p>
+            <div class="resumeBlock"><span class="resumeBlock__header">Experience</span>
+              <div data-wow-delay="500ms" class="resumeBlockItem wow fadeIn">
+                <div class="resumeBlockItem__data">
+                  <p class="resumeBlockItem__position"><i class="fa fa-certificate"></i>Freelancer
+                  </p>
+                  <p class="resumeBlockItem__place"><i class="fa fa-building"></i>Around the world
+                  </p>
+                  <p class="resumeBlockItem__period"><i class="fa fa-calendar"></i>2015 - Present
+                  </p>
+                </div>
+                <p class="resumeBlockItem__desc">Web-developing, consulting, prototyping
+                </p>
+                <div class="clearfix"></div>
+              </div>
+              <div data-wow-delay="500ms" class="resumeBlockItem wow fadeIn">
+                <div class="resumeBlockItem__data">
+                  <p class="resumeBlockItem__position"><i class="fa fa-certificate"></i>System Analyst
+                  </p>
+                  <p class="resumeBlockItem__place"><i class="fa fa-building"></i>Center IT
+                  </p>
+                  <p class="resumeBlockItem__period"><i class="fa fa-calendar"></i>2012 - 2015
+                  </p>
+                </div>
+                <p class="resumeBlockItem__desc">As a system analyst, I participated in all phases of information systems development: I <b>was negotiating</b> with client representatives, I <b>generated new ideas</b> for the system, <b>created detailed task</b> for developers, <b>designed forms</b> of interface, <b>designed the data structure</b>, <b>produced</b> all the documentation and <b>presented projects</b> to customers and users, <b>implemented the system</b> in the customer's infrastructure.
+                </p>
+                <div class="clearfix"></div>
+              </div>
+              <div data-wow-delay="500ms" class="resumeBlockItem wow fadeIn">
+                <div class="resumeBlockItem__data">
+                  <p class="resumeBlockItem__position"><i class="fa fa-certificate"></i>Manager of creative technologies
+                  </p>
+                  <p class="resumeBlockItem__place"><i class="fa fa-building"></i>SKB-Bank
+                  </p>
+                  <p class="resumeBlockItem__period"><i class="fa fa-calendar"></i>2010 - 2012
+                  </p>
+                </div>
+                <p class="resumeBlockItem__desc">I was suggesting new ideas to implement in the Bank. Before these, I had conducted a full economic analysis and design of main stages of development and implementation. The primary analysis had been conducted in the technical, economic, law, marketing areas. Also I tracked innovations in the market and adapted to the specifics of our Bank. Also I coordinated concepts of projects with experts and presented them to management.
+                </p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="resumeBlock"><span class="resumeBlock__header">Education</span>
+              <div data-wow-delay="500ms" class="resumeBlockItem wow fadeIn">
+                <div class="resumeBlockItem__data">
+                  <p class="resumeBlockItem__position"><i class="fa fa-certificate"></i>Applied Information Science in Economics
+                  </p>
+                  <p class="resumeBlockItem__place"><i class="fa fa-building"></i>Ural Federal University
+                  </p>
+                  <p class="resumeBlockItem__period"><i class="fa fa-calendar"></i>2006 - 2011
+                  </p>
+                </div>
+                <p class="resumeBlockItem__desc">Web-developing, consulting, prototyping
+                </p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="skills" class="skills section">
+          <div class="skillsPage skillsPage--skills">
+            <h2 class="section__header skills__header">Skills</h2>
+            <p class="section__subheader skills__subheader">I have experience of working according the following technologies and notations:</p><a href="#" id="skillsPageBtn" class="skillsPage__tab skillsPage--skills__tab"><i class="fa fa-angle-left"></i>&nbsp; Skills</a>
+            <div class="skillFlexContainer">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div title="Functional/System Requirement Specification documentation" class="skillRow__col skillRow__col--col1 tooltip">FRS/SRS docs&nbsp;(en)
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div title="Functional/System Requirement Specification documentation" class="skillRow__col skillRow__col--col1 tooltip">FRS/SRS docs&nbsp;(rus)
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">Prototyping
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">XML/XSD/XSLT
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">UML/BPMN
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">Project Management
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <hr class="hr hr--skills">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">HTML5/CSS3
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">SASS/Compass
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">Responsive HTML
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">Wordpress
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">jQuery
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">JS
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">SQL
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="skillsPage skillsPage--tools">
+            <h2 class="section__header skills__header">Tools</h2>
+            <p class="section__subheader skills__subheader">Next tools are my weapon. I know them good:</p><a href="#" id="toolsPageBtn" class="skillsPage__tab skillsPage--tools__tab">Tools &nbsp;<i class="fa fa-angle-right"></i></a>
+            <div class="skillFlexContainer">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/Word2.png"/>MS Word
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/Excel2.png"/>MS Excel
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/PowerPoint2.png"/>MS Powerpoint
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <hr class="hr hr--skills">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/confluence.png"/>Atlassian Сonfluence
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/jira2.png"/>Atlassian JIRA
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <hr class="hr hr--skills">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/balsamiq.png"/>Balsamiq Mockups
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/axurelogo.png"/>Axure RP
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <hr class="hr hr--skills">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1">Putty / Filezilla
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/IBM-Rational-Software-Architect-RSA.png"/>Rational Software Architect
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/XmlSpy_icon_by_simayel.jpg"/>Altova XML Spy
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <hr class="hr hr--skills">
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/photoshop2.png"/>Adobe Photoshop
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/beaver-head.png"/>DBeaver
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★★</span>
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/idea.png"/>Intellij IDEA
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★★</span>★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+              <div data-wow-offset="200" data-wow-duration="1200" class="skillRow wow fadeIn">
+                <div class="skillRow__col skillRow__col--col1"><img src="img/tools/Git-Logo.png"/>GIT
+                </div>
+                <div class="skillRow__col skillRow__col--col2"><span>★★★</span>★★
+                  <!--.skillRow__col.skillRow__col--col3= col3-->
+                  
+                  
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--section#projects.projects.section.valign-middle-->
+        <!--    .valign-middle__cell-->
+        <!--        h2.section__header.projects__header Projects-->
+        <!--        p.section__subheader.projects__subheader-->
+        <!--section#status.status.section.valign-middle
+        .valign-middle__cell
+            h2.section__header.resume__header Status
+            p.section__subheader.resume__subheader
+        
+        -->
+        <section id="contact" class="contact section valign-middle">
+          <div class="valign-middle__cell">
+            <h2 class="section__header contact__header">Contact me</h2>
+            <p class="section__subheader contact__subheader">Drop me a line or give me a ring. I look forward to hearing from you</p>
+            <div class="contact__left col-6">
+              <div class="tooltip__container"><a href="#" data-tooltipId="yekb2" class="contact__address tooltip__link"><i class="fa fa-map-pin"></i>Yekaterinburg, Russia</a>
+                <div id="yekb2" class="tooltip__item">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.4800667290588!2d60.59558831612708!3d56.83770891526234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDUwJzE1LjciTiA2MMKwMzUnNTIuMCJF!5e0!3m2!1sru!2s!4v1460818516136" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <p class="contact__email"><a href="mailto:mikhail@garmashov.com"><i class="fa fa-envelope"></i>mikhail@garmashov.com</a></p>
+              <p class="contact__website"><a href="https://garmashov.com"><i class="fa fa-globe"></i>https://garmashov.com</a></p>
+              <!--p.contact__upwork.withUpworkIcon
+              a(href='https://www.upwork.com/freelancers/~01e66dac02573e65a4')
+                  img(src='img/upwork.svg')
+                  |Upwork Profile
+              
+              -->
+              <p class="contact__linkedIn"><a href="https://ru.linkedin.com/in/mgarmashov"><i class="fa fa-linkedin-square"></i>LinkedIn</a></p>
+            </div>
+            <div class="contact__right col-6">
+              <div class="wpcf7">
+                <p class="wpcf7__header">Write me a letter</p>
+                <form id="contact-form" class="wpcf7-form">
+                  <p><span class="wpcf7-form-control-wrap name">
+                      <input type="text" placeholder="Name" id="c_name" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"></span></p>
+                  <p><span class="wpcf7-form-control-wrap your-email">
+                      <input type="email" placeholder="E-mail" id="c_email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"></span></p>
+                  <p><span class="wpcf7-form-control-wrap message">
+                      <textarea name="message" placeholder="Message" id="c_message" class="wpcf7-form-control wpcf7-textarea"></textarea></span></p>
+                  <p>
+                    <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit">
+                  </p>
+                </form>
+                <div class="ajax-response"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        $('a:contains("Rus")').addClass('active');
+        $('a:contains("En")').removeClass('active');
+      </script>
+    </div>
+    
+    <script src="assets/jquery-ui.js"></script>
+    <script src="assets/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="assets/typed.min.js"></script>
+    <script src="assets/wow/wow.min.js"></script>
+    <script src="assets/tooltipster/js/jquery.tooltipster.js"></script>
+    <script src="js/navbarLinks.js"></script>
+    <script src="js/tooltipMap.js"></script>
+    <script src="js/skillsSectionsTabs.js"></script>
+    <script src="js/largeScroll.js"></script>
+    <script src="js/testimonialSlider.js"></script>
+    <script src="assets/jquery.transit.min.js"></script>
+    <script src="assets/bxslider/jquery.bxslider.min.js"></script>
+    <script src="js/leaves.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject'] = r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-77539922-1', 'auto');
+      ga('send', 'pageview');
+      
+      
+      
+    </script>
+    <script>
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function () {
+              try {
+                  w.yaCounter30176719 = new Ya.Metrika({
+                      id: 30176719,
+                      clickmap: true,
+                      trackLinks: true,
+                      accurateTrackBounce: true,
+                      webvisor: true
+                  });
+              } catch (e) {
+              }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+      
+    </script>
+    <noscript>
+      <div>
+      <img src="https://mc.yandex.ru/watch/30176719" style="position:absolute; left:-9999px;" alt=""/>
+      </div>
+    </noscript>
+  </body>
+</html>

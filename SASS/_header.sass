@@ -1,0 +1,121 @@
+
+.header
+  text-align: center
+  height: 100vh
+  position: fixed
+  z-index: 10
+
+  //small Screen
+  //@media (max-width: ($breakpoint-xl) - 1)
+  background: $bgColor
+  border-right: 3px solid $additionalColor
+  width: $smallHeaderWidth
+
+  //large Screen
+  @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+    background: none
+    border-right: none
+    width: $menuWidth
+    left: 1% !important
+    top: $topFieldWidth
+
+  left: - $smallHeaderWidth
+  //&.smallHeader--opened
+    left: 0
+    @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+      left: 1%
+
+
+.smallphoto
+  width: $smallHeaderWidth*0.8
+  height: $smallHeaderWidth*0.8
+  margin-top: 20px
+  @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+    width: 100%
+    height: $menuWidth
+    margin-top: 0
+
+  box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.5)
+  background-color: $additionalColor
+  border: 2px solid $additionalColor
+    radius: 50%
+  display: inline-block
+  overflow: hidden
+  &:hover
+    box-shadow: 0 0 10px #fff inset
+  //img
+  //  display: inline-block
+  //  width: 100%
+  //  height: 100%
+
+
+.lang
+  margin-top: 20px
+  a
+    color: $lightColor
+    padding: 3px 5px
+    &:hover, &.active
+      //color: $additionalColor
+      //background: darken($mainColor, 30%)
+      background: $additionalColor
+
+.navmenu
+  margin-top: 30px
+  &__item
+    display: block
+    &.active
+      .navmenu__link
+        background: darken($mainColor, 30%)
+
+  &__link
+    line-height: 4em
+    @media (max-height: 560px)
+      line-height: 3em
+    width: 100%
+    background: $additionalColor
+    color: $lightColor
+    display: inline-block
+    &:hover
+      background: darken($mainColor, 30%)
+      color: $lightColor
+
+
+
+
+.headerButton
+  //margin: 5px 5px 6px
+  border-radius: 4px
+  //background: transparent
+  position: fixed
+  display: inline-block
+  @media (min-width: $breakpoint-xl) and (-webkit-min-device-pixel-ratio:0)
+    display: none
+  top: 15px
+  margin-left: 15px
+  box-shadow: 5px 5px 13px rgba(100, 100, 100, 0.5)
+  //vertical-align: middle
+
+  padding: 7px 7px 1px 7px
+  //line-height: 1.125em
+  cursor: pointer
+  z-index: 11
+  background: $additionalColor
+
+
+  //&__icon
+    //float: left
+  //&__bar
+    background-color: $lightColor
+    display: block
+    width: 21px
+    height: 4px
+    border-radius: 2px
+    & + &
+      margin-top: 3px
+
+  //&.smallHeader--opened
+    left: $smallHeaderWidth
+    .headerButton__bar
+      background-color: $bgColor
+
+

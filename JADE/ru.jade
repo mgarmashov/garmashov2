@@ -1,0 +1,265 @@
+
+mixin serviceItem(fa, header, text, wow)
+    .col-4.serviceList__item.service(class!=attributes.class, data-wow-offset!=attributes.off, data-wow-duration!=attributes.dur, data-wow-delay!=attributes.del)
+        i.serviceList__icon.fa(class='fa-'+fa)
+        h3.serviceList__header= header
+        p.serviceList__text!= text
+
+mixin stats(number, text, col, fa)
+    .stats__feature(class='stats_feature--feature'+col)(class!=attributes.class, data-wow-offset!=attributes.off, data-wow-duration!=attributes.dur, data-wow-delay!=attributes.del)
+        p.stats__count
+            i.fa(class='fa-'+fa)
+            != number
+        p.stats__text= text
+
+
+mixin resumeItem(position, desc, place, period)
+    .resumeBlockItem(class="wow fadeIn" data-wow-delay='500ms')
+        .resumeBlockItem__data
+            p.resumeBlockItem__position
+                i.fa.fa-certificate
+                != position
+            p.resumeBlockItem__place
+                i.fa.fa-building
+                != place
+            p.resumeBlockItem__period
+                i.fa.fa-calendar
+                != period
+        p.resumeBlockItem__desc
+                != desc
+
+        .clearfix
+
+mixin skillRow(col1, col2, col3, img)
+    .skillRow(class="wow fadeIn" data-wow-offset="200"  data-wow-duration="1200")
+        .skillRow__col.skillRow__col--col1(class!=attributes.class title!=attributes.title)
+            if block
+                img(src='img/tools/'+img)
+            != col1
+        .skillRow__col.skillRow__col--col2!= col2
+            //.skillRow__col.skillRow__col--col3= col3
+
+
+
+
+extends _framing.jade
+block content
+
+    .content#content
+
+        section#home.home.section.valign-middle
+            .valign-middle__cell
+                .home__background
+                h1.home__header(class="wow fadeIn" data-wow-duration="5s") Hello, I'm Mikhail
+                span.home__specialization
+                .home__contacts(class="wow bounceInUp")
+                    .home__address.col-4.home__contactsItem.tooltip__container
+                        a.tooltip__link(href='#' data-tooltipId='yekb1')
+                            i.fa.fa-map-pin
+                            | Yekaterinburg, Russia
+                        .tooltip__item#yekb1
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.4800667290588!2d60.59558831612709!3d56.83770891526234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDUwJzE1LjciTiA2MMKwMzUnNTIuMCJF!5e0!3m2!1sru!2s!4v1460818516136" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
+
+                    .home__email.col-4.home__contactsItem
+                        a(href='mailto:mikhail@garmashov.com')
+                            i.fa.fa-envelope
+                            | mikhail@garmashov.com
+                    .home__upwork.col-4.home__contactsItem.withUpworkIcon
+                        a(href='https://www.upwork.com/freelancers/~01e66dac02573e65a4')
+                            img(src='img/upwork.svg')
+                            | Upwork Profile
+
+
+        section#about.about.section.valign-middle
+            .valign-middle__cell
+                h1 Mikhail Garmashov
+                .about__photo(style='background-image: url("img/portrait2_bw.png")').bg-photo(class='wow bounceInLeft')
+                .about__content
+                    h2.section__header.section__header--about(class="wow bounceInDown" ) Professional Profile
+                    .about__text(class="wow bounceInRight")
+                        p I develop an information system in terms of interaction with the user.
+                        p I act as system analyst with web development skills. In this capacity, I've been more than 5 years.
+                        p >4 years I worked in a large IT-company, which develops systems for the state - a complex architecture, complex solutions. Working with large data structures algorhythms, modelling, analizing, presentations.
+                        p Last year, as a freelancer, I develop small projects for mass users.
+                        p
+                            b My area of expertise covers all related areas:
+                        ul
+                            li define goals and objectives of the system. The formalization of requirements (SRS, FRS)
+                            li planning the implementation, stages of development
+                            li prototyping of the interface for planning of all custom functions
+                            li development of the visual part of the system (coding)
+                            li the relation with the backend
+                        p.text-center.italic  I'm not just analyst or coder or web-designer.
+                            br
+                            | I'm a set of them, that helps to consult and resolve any problem&nbsp;of&nbsp;IT.
+                    .stats
+                        .stats__featuresList
+                            +stats('5+', 'years in IT', '1', 'laptop')(class='wow bounceInUp' del='200ms')
+                            +stats('$10M', 'project budgets', '2', 'cogs')(class='wow bounceInUp' del='400ms')
+                            +stats('40+', 'projects', '3', 'flag')(class='wow bounceInUp' del='600ms')
+
+
+        section#services.services.section.valign-middle
+            .valign-middle__cell
+                h2.section__header.services__header(class="wow bounceInDown" data-wow-delay='200ms') What I can do
+                p.section__subheader.services__subheader(class="wow bounceInDown") Need something? I got it
+                .serviceList
+
+                    +serviceItem('binoculars','System Analyst', 'My main specialization - System Analytics. What does it mean? I anailaize your subject for planning all IT work. I architect database - define data, which is necessary for your system, I define functionality, I explore similar projects for getting ideas and best practices. So System analyst - it&#39;s all points of IT-view.')(class='wow bounceInLeft')
+                    +serviceItem('question-circle','IT-consultations', 'Consultations about IT-architecture, about requirements and purposes. I can help to define business task of your system, determine full list of needed functionality, divide for stages of developing, choose platform or CMS, target group, plan of testing and much more else.')(class='wow bounceInDown')
+                    +serviceItem('pencil-square-o','Prototyping', 'It helps to define approximate form of your site, service. It could be made fast. AFter getting prototypr, you will see that all functionality thast you need will be realised, or you forget something. Prototype doesn&#39;t work as system, but it has lot of interface solutions.')(class='wow bounceInRight')
+                    +serviceItem('desktop','Frontend-developing', 'Everything related with Frontenf part of your system - interface, animation, forms, styles. I realize live html pages for mobiles, tablets, large screens. Also offer web-design. I don&#39;t draw graphics. Just combine colors, fonts, sizes, etc.')(class='wow bounceInUp' del='200ms')
+                    +serviceItem('code','Web-developing', 'If you need some popular functionality without unique backend issues, I also do it! Mostly CMS Wordpress is used. I write some easy plugins ad make your site really working.')(class='wow bounceInUp' del='400ms')
+                    +serviceItem('suitcase','Project Management', 'If I can&#39;t to resolve some stuff, if I understand that your project needs some really hard coding or drawing design, so I can hire highly specialized freelancers. Also If you have large project, I can build process of communication and working between freelancers.')(class='wow bounceInUp' del='600ms')
+
+
+        section#resume.resume.section.valign-middle
+            .valign-middle__cell
+                h2.section__header.resume__header Resume
+                p.section__subheader.resume__subheader My education and experience
+
+                .resumeBlock
+                    span.resumeBlock__header Experience
+                    +resumeItem('Freelancer', 'Web-developing, consulting, prototyping', 'Around the world', '2015 - Present')
+                    +resumeItem('System Analyst', "As a system analyst, I participated in all phases of information systems development: I <b>was negotiating</b> with client representatives, I <b>generated new ideas</b> for the system, <b>created detailed task</b> for developers, <b>designed forms</b> of interface, <b>designed the data structure</b>, <b>produced</b> all the documentation and <b>presented projects</b> to customers and users, <b>implemented the system</b> in the customer's infrastructure.", 'Center IT', '2012 - 2015')
+                    +resumeItem('Manager of creative technologies', "I was suggesting new ideas to implement in the Bank. Before these, I had conducted a full economic analysis and design of main stages of development and implementation. The primary analysis had been conducted in the technical, economic, law, marketing areas. Also I tracked innovations in the market and adapted to the specifics of our Bank. Also I coordinated concepts of projects with experts and presented them to management.", 'SKB-Bank', '2010 - 2012')
+
+                .resumeBlock
+                    span.resumeBlock__header Education
+                    +resumeItem('Applied Information Science in Economics', 'Web-developing, consulting, prototyping', 'Ural Federal University', '2006 - 2011')
+
+
+
+
+
+
+
+        section#skills.skills.section
+                .skillsPage.skillsPage--skills
+                    h2.section__header.skills__header Skills
+                    p.section__subheader.skills__subheader I have experience of working according the following technologies and notations:
+                    a.skillsPage__tab.skillsPage--skills__tab(href='#')#skillsPageBtn
+                        i.fa.fa-angle-left
+                        | &nbsp; Skills
+                    .skillFlexContainer
+                        +skillRow('FRS/SRS docs&nbsp;(en)','<span>★★★★</span>★','desc')(class='tooltip' title='Functional/System Requirement Specification documentation')
+                        +skillRow('FRS/SRS docs&nbsp;(rus)','<span>★★★★★</span>','desc')(class='tooltip' title='Functional/System Requirement Specification documentation')
+                        +skillRow('Prototyping','<span>★★★★★</span>','desc')
+                        +skillRow('XML/XSD/XSLT','<span>★★★★</span>★','desc')
+                        +skillRow('UML/BPMN','<span>★★★★</span>★','desc')
+                        +skillRow('Project Management','<span>★★★★</span>★','desc')
+                        hr.hr.hr--skills
+                        +skillRow('HTML5/CSS3','<span>★★★★★</span>','desc')
+                        +skillRow('SASS/Compass','<span>★★★★★</span>','desc')
+                        +skillRow('Responsive HTML','<span>★★★★★</span>','desc')
+                        +skillRow('Wordpress','<span>★★★★</span>★','desc')
+                        +skillRow('jQuery','<span>★★★★</span>★','desc')
+                        +skillRow('JS','<span>★★★</span>★★','desc')
+                        +skillRow('SQL','<span>★★★</span>★★','desc')
+
+
+
+                .skillsPage.skillsPage--tools
+                    h2.section__header.skills__header Tools
+                    p.section__subheader.skills__subheader Next tools are my weapon. I know them good:
+                    a.skillsPage__tab.skillsPage--tools__tab(href='#')#toolsPageBtn Tools &nbsp;
+                        i.fa.fa-angle-right
+                    .skillFlexContainer
+                        +skillRow('MS Word','<span>★★★★★</span>','Experience: 5 years', 'Word2.png')
+                            p 1
+                        +skillRow('MS Excel','<span>★★★</span>★★','Experience: 5 years', 'Excel2.png')
+                            p 1
+                        +skillRow('MS Powerpoint','<span>★★★★★</span>','Experience: 5 years','PowerPoint2.png')
+                            p 1
+                        hr.hr.hr--skills
+                        +skillRow('Atlassian Сonfluence','<span>★★★</span>★★','Experience: 5 years', 'confluence.png')
+                            p 1
+                        +skillRow('Atlassian JIRA','<span>★★★</span>★★','Experience: 5 years', 'jira2.png')
+                            p 1
+                        hr.hr.hr--skills
+                        +skillRow('Balsamiq Mockups','<span>★★★★★</span>','Experience: 5 years', 'balsamiq.png')
+                            p 1
+                        +skillRow('Axure RP','<span>★★★★★</span>','Experience: 5 years', 'axurelogo.png')
+                            p 1
+                        hr.hr.hr--skills
+                        +skillRow('Putty / Filezilla','<span>★★★★★</span>','Experience: 5 years')
+                        +skillRow('Rational Software Architect','<span>★★★</span>★★','Experience: 5 years', 'IBM-Rational-Software-Architect-RSA.png')
+                            p 1
+                        +skillRow('Altova XML Spy','<span>★★★★</span>★','Experience: 5 years','XmlSpy_icon_by_simayel.jpg')
+                            p 1
+                        hr.hr.hr--skills
+                        +skillRow('Adobe Photoshop','<span>★★★</span>★★','Experience: 5 years','photoshop2.png')
+                            p 1
+                        +skillRow('DBeaver','<span>★★★★★</span>','Experience: 5 years','beaver-head.png')
+                            p 1
+                        +skillRow('Intellij IDEA','<span>★★★★</span>★','Experience: 5 years','idea.png')
+                            p 1
+                        +skillRow('GIT','<span>★★★</span>★★','Experience: 5 years','Git-Logo.png')
+                            p 1
+
+
+        //section#projects.projects.section.valign-middle
+        //    .valign-middle__cell
+        //        h2.section__header.projects__header Projects
+        //        p.section__subheader.projects__subheader
+
+        //section#status.status.section.valign-middle
+            .valign-middle__cell
+                h2.section__header.resume__header Status
+                p.section__subheader.resume__subheader
+
+        section#contact.contact.section.valign-middle
+            .valign-middle__cell
+                h2.section__header.contact__header Contact me
+                p.section__subheader.contact__subheader Drop me a line or give me a ring. I look forward to hearing from you
+                .contact__left.col-6
+                    .tooltip__container
+                        a.contact__address.tooltip__link(href='#' data-tooltipId='yekb2')
+                            i.fa.fa-map-pin
+                            | Yekaterinburg, Russia
+                        .tooltip__item#yekb2
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.4800667290588!2d60.59558831612708!3d56.83770891526234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDUwJzE1LjciTiA2MMKwMzUnNTIuMCJF!5e0!3m2!1sru!2s!4v1460818516136" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
+
+                    p.contact__email
+                        a(href='mailto:mikhail@garmashov.com')
+                            i.fa.fa-envelope
+                            | mikhail@garmashov.com
+                    p.contact__website
+                        a(href='https://garmashov.com')
+                            i.fa.fa-globe
+                            |https://garmashov.com
+
+                    //p.contact__upwork.withUpworkIcon
+                        a(href='https://www.upwork.com/freelancers/~01e66dac02573e65a4')
+                            img(src='img/upwork.svg')
+                            |Upwork Profile
+
+                    p.contact__linkedIn
+                        a(href='https://ru.linkedin.com/in/mgarmashov')
+                            i.fa.fa-linkedin-square
+                            |LinkedIn
+
+                .contact__right.col-6
+                    .wpcf7
+                        p.wpcf7__header Write me a letter
+                        form.wpcf7-form#contact-form
+                            p
+                                span.wpcf7-form-control-wrap.name
+                                    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required(type='text' placeholder='Name')#c_name
+                            p
+
+                                span.wpcf7-form-control-wrap.your-email
+                                    input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email(type='email', placeholder='E-mail')#c_email
+                            p
+                                span.wpcf7-form-control-wrap.message
+                                    textarea.wpcf7-form-control.wpcf7-textarea(name='message', placeholder='Message')#c_message
+                            p
+                                input.wpcf7-form-control.wpcf7-submit(type='submit', value='Send')
+                        .ajax-response
+
+
+
+
+    script.
+        $('a:contains("Rus")').addClass('active');
+        $('a:contains("En")').removeClass('active');

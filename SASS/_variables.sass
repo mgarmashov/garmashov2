@@ -1,0 +1,40 @@
+$topFieldWidth: 5%
+$rightFieldWidth:5%
+$bottomFieldWidth:5%
+$leftFieldWidth: 20%
+$menuWidth: 200px
+
+
+
+
+$mainColor: rgba(79, 208, 234, 1)
+$bgColor: lighten($mainColor, 15%)
+//$additionalColor: #8ab839
+$additionalColor: darken($mainColor, 22%)
+$darkColor: rgba(33, 42, 63, 1)
+$lightColor: rgba(255,255,255,1)
+
+
+$breakpoint-xl: 1100px
+$breakpoint-md: 760px
+$breakpoint-sm: 540px
+$breakpoint-vertical: 700px
+
+$smallHeaderWidth: 150px
+
+
+
+
+@mixin filter($text)
+  -webkit-filter: $text
+  -moz-filter: $text
+  -o-filter: $text
+  -ms-filter: $text
+  filter: $text
+
+
+@mixin transition($text)
+  -webkit-transition: $text
+  -moz-transition: $text
+  -o-transition: $text
+  transition: $text

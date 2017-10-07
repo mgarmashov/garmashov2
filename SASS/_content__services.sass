@@ -1,0 +1,36 @@
+.services
+  //background-color: rgba(243, 239, 224, 0.85)
+  background:  rgba($lightColor, 0.05)
+  color: $lightColor
+  //border-left: 1px solid $lightColor
+  //border-right: 1px solid $lightColor
+  text-shadow: 1px 2px 1px $darkColor
+  i
+    color: $additionalColor
+  &__header
+  &__subheader
+.serviceList
+  margin-top: 5%
+  display: flex
+  flex-wrap: wrap
+  &__item
+    //display: flex
+    @media (max-width: $breakpoint-md - 1)
+      width: 49%
+    @media (max-width: $breakpoint-sm - 1)
+      width: 100%
+
+    padding-right: 15px
+    margin: 15px 0
+  &__icon
+    font-size: 1.8em
+  &__header
+    font-family: 'Roboto Condensed', sans-serif
+    text-transform: uppercase
+    font-size: 1.25em
+    font-weight: 700
+  &__text
+    font-size: 0.8em
+    text-shadow: 0px 0px 1px $darkColor
+
+//border: blue
